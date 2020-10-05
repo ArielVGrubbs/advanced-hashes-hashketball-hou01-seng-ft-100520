@@ -154,6 +154,7 @@ def team_colors(team_name)
   correct_team = game_hash.find do |team|
     team[:team_name] == team_name
   end
+  binding.pry
   correct_team[:colors]
 end
 
