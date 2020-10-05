@@ -151,11 +151,11 @@ def shoe_size(player_name)
 end
 
 def team_colors(team_name)
-  correct_team = game_hash.find do |location, hash_info|
+  game_hash.find do |location, hash_info|
     hash_info[:team_name] == team_name
     binding.pry
   end
-  correct_team[:colors]
+  hash_info[:colors]
 end
 
 #def num_points_scored (name)
