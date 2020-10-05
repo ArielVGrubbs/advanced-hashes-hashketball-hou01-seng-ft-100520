@@ -159,6 +159,11 @@ def team_colors(team_name)
   end
 end
 
+def team_names
+  team_names = [game_hash[:home][:team_name], game_hash[:away][:team_name]]
+  team_names
+end
+
 #def num_points_scored (name)
   #game_hash
   #counter = 0
@@ -200,11 +205,7 @@ end
   #team_colors
 #end
 
-def team_names
-  game_hash
-  team_names = [game_hash[:home][:team_name], game_hash[:away][:team_name]]
-  team_names
-end
+
 
 def player_numbers (team_name)
   game_hash
