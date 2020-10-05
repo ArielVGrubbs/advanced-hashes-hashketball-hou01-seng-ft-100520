@@ -153,7 +153,7 @@ end
 def team_colors(team_name)
   binding.pry
   correct_team = game_hash.find do |location, hash_info|
-    hash_info[:home][:team_name] == team_name
+    hash_info[:team_name] == team_name
   end
   correct_team[:colors]
 end
