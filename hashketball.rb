@@ -153,9 +153,9 @@ end
 def team_colors(team_name)
   game_hash.find do |location, hash_info|
     hash_info[:team_name] == team_name
+    hash_info[:colors]
     binding.pry
   end
-  hash_info[:colors]
 end
 
 #def num_points_scored (name)
