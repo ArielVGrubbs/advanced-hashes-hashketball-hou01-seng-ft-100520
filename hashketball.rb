@@ -164,6 +164,22 @@ def team_names
   team_names
 end
 
+def player_numbers
+  number_array = []
+  game_hash.each do |location, hash_info|
+    if game_hash[location][:team_name] == team
+      game_hash[location][:players].each do |player|
+        number_array << player[:number]
+      end
+    end
+  end
+  return number_array
+end
+
+def player_stats(player_name)
+  
+end
+
 #def num_points_scored (name)
   #game_hash
   #counter = 0
@@ -207,24 +223,24 @@ end
 
 
 
-def player_numbers (team_name)
-  game_hash
-  counter = 0
-  player_numbers = []
-  while counter < 5 do
-    if game_hash[:home][:team_name] == team_name
-      player_numbers << game_hash[:home][:players][counter][:number]
-    end
-    if game_hash[:away][:team_name] == team_name
-      player_numbers << game_hash[:away][:players][counter][:number]
-    end
-    counter += 1
-  end
-  player_numbers
-end
+#def player_numbers (team_name)
+  #game_hash
+  #counter = 0
+  #player_numbers = []
+  #while counter < 5 do
+    #if game_hash[:home][:team_name] == team_name
+      #player_numbers << game_hash[:home][:players][counter][:number]
+    #end
+    #if game_hash[:away][:team_name] == team_name
+      #player_numbers << game_hash[:away][:players][counter][:number]
+    #end
+    #counter += 1
+  #end
+  #player_numbers
+#end
 
-def player_stats (name)
-  game_hash
+#def player_stats (name)
+  #game_hash
   counter = 0
   players_stats = {}
   while counter < 5 do
